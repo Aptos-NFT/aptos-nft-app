@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="form">
+                <div class="left-side">
+                    <div class="left-heading">
+                        <h3>NFT Launchpad</h3>
+                    </div>
+                    <div class="steps-content">
+                        <h3>Step <span class="step-number">1</span></h3>
+                        <p class="step-number-content active">Enter your personal information to get closer to companies.</p>
+                        <p class="step-number-content d-none">Get to know better by adding your diploma,certificate and education life.</p>
+                        <p class="step-number-content d-none">Help companies get to know you better by telling then about your past experiences.</p>
+                        <p class="step-number-content d-none">Add your profile piccture and let companies find youy fast.</p>
+                    </div>
+                    <ul class="progress-bar">
+                        <li class="active">Metadata</li>
+                        <li>Licensing agreement</li>
+                        <li>Review</li>
+                    </ul>
+                </div>
+                <div class="right-side">
+                    <div class="main active">
+                        <small><i class="fa fa-smile-o"></i></small>
+                        <div class="text">
+                            <h2>Metadata</h2>
+                            <p>Enter your information regarding the uploaded NFT.</p>
+                        </div>
+                        <div class="input-text">
+                            <div class="input-div">
+                                <input type="text" id="nft-name">
+                                <span>NFT Name</span>
+                            </div>
+                        </div>
+                        <div class="input-text">
+                            <div class="input-div">
+                                <input type="text" id="nft-description">
+                                <span>NFT Description</span>
+                            </div>
+                        </div>
+                        <form id="upload" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="input-group" style="margin: 30px 0;">
+                                <div class="custom-file">
+                                    <input type="file" name="upload" class="custom-file-input" id="inputGroupFile04">
+                                    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="buttons">
+                            <button class="next_button">Next Step</button>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <small><i class="fa fa-smile-o"></i></small>
+                        <div class="text">
+                            <h2>Licensing Agreement</h2>
+                            <p>Create the license for your NFT.</p>
+                        </div>
+                        <div class="input-text">
+                            <div class="input-div">
+                                <input type="text" id="full-name">
+                                <span>Full Legal Name</span>
+                            </div>
+                        </div>
+                        <div class="input-text">
+                            <div class="input-div">
+                                <select id="license-type">
+                                    <option>Select License</option>
+                                    <option>Exclusive license</option>
+                                    <option>Non-exclusive license</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-text">
+                            <div class="input-div">
+                                <select id="contract-term">
+                                    <option>Contract Term</option>
+                                    <option>6 months</option>
+                                    <option>12 months</option>
+                                    <option>24 months</option>
+                                </select>
+                            </div>
+                            <div class="input-div">
+                                <div class="input-div">
+                                    <input type="text" id="royalty-amt">
+                                    <span>Royalty Amount</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buttons button_space">
+                            <button class="back_button">Back</button>
+                            <button class="next_button" onClick="updateParameters()">Next Step</button>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <small><i class="fa fa-smile-o"></i></small>
+                        <div class="text">
+                            <h2>Review Information</h2>
+                        </div>
+                        <div class="card" style="width: 100%; height: 100%; margin: 30px 0;">
+                            <div class="card-body">
+                                <h5 class="card-title" id="review-nft-title">Card title</h5>
+                                <h6 class="card-subtitle mb-2 text-muted" id="review-nft-license">Card subtitle</h6>
+                                <p class="card-text" id="review-nft-description">
+                                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                                </p>
+                                <a href="#" id="view" target=”_blank” class="card-link">See NFT</a>
+                                <a href="#" id="license" target=”_blank” class="card-link">See License</a>
+                            </div>
+                        </div>
+                        <div class="buttons button_space">
+                            <button class="back_button">Back</button>
+                            <button class="next_button" onclick="mint()">Mint</button>
+                        </div>
+                    </div>
+                    
+                    <div class="main">
+                         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                             <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                        </svg>
+                        <div class="text congrats">
+                            <h2>Congratulations!</h2>
+                            <p>Thanks Mr./Mrs. <span class="shown_name"></span> your information have been submitted successfully for the future reference we will contact you soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'index.js' %}"></script>
+</html>

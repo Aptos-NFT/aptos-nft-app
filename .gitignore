@@ -1,0 +1,30 @@
+# Python
+__pycache__
+*.pyc
+.project
+.pydevproject
+# Sqlite databases
+*.sqlite3
+# Django
+local_settings.py
+media/*
+static/*
+# Coverage
+.coverage
+htmlcov
+# node
+node_modules/*
+
+# Apple
+.DS_Store
+
+## editors
+# Vim
+*.swp
+*.swo
+# IntelliJ
+.idea/
+# Sublime
+*.sublime-workspace
+# Temporary files
+*~
