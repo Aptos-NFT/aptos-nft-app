@@ -223,7 +223,7 @@ select{
     font-size:14px;
     transition:all 0.2s;
 }
-.input-div input:focus ~ span,.input-div input:valid ~ span  {
+.input-div input:focus ~ span,.input-div input:valid ~ span, .addr {
     top:-15px;
     left:6px;
     font-size:10px;
