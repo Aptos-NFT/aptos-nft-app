@@ -1,41 +1,578 @@
-<!DOCTYPE html>
 <html>
-  <body>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <style type="text/css">
+      @import url("https://themes.googleusercontent.com/fonts/css?kit=hh9VFM0qOK4TrLidDd__Ui5bnSrpY5TE94xSqAiQW93OfsfM6rvuuu7h1pY3r_-A");
+      .lst-kix_krtosyw4tuge-5 > li {
+        counter-increment: lst-ctn-kix_krtosyw4tuge-5;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-5.start {
+        counter-reset: lst-ctn-kix_fjcmf2rd6vpk-5 0;
+      }
+      .lst-kix_fjcmf2rd6vpk-6 > li {
+        counter-increment: lst-ctn-kix_fjcmf2rd6vpk-6;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-8.start {
+        counter-reset: lst-ctn-kix_fjcmf2rd6vpk-8 0;
+      }
+      .lst-kix_fjcmf2rd6vpk-1 > li {
+        counter-increment: lst-ctn-kix_fjcmf2rd6vpk-1;
+      }
+      ol.lst-kix_krtosyw4tuge-1.start {
+        counter-reset: lst-ctn-kix_krtosyw4tuge-1 0;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-1.start {
+        counter-reset: lst-ctn-kix_fjcmf2rd6vpk-1 0;
+      }
+      .lst-kix_fjcmf2rd6vpk-8 > li:before {
+        content: "" counter(lst-ctn-kix_fjcmf2rd6vpk-8, lower-roman) ". ";
+      }
+      ol.lst-kix_krtosyw4tuge-4.start {
+        counter-reset: lst-ctn-kix_krtosyw4tuge-4 0;
+      }
+      ol.lst-kix_krtosyw4tuge-7.start {
+        counter-reset: lst-ctn-kix_krtosyw4tuge-7 0;
+      }
+      .lst-kix_fjcmf2rd6vpk-7 > li:before {
+        content: "" counter(lst-ctn-kix_fjcmf2rd6vpk-7, lower-latin) ". ";
+      }
+      .lst-kix_fjcmf2rd6vpk-5 > li {
+        counter-increment: lst-ctn-kix_fjcmf2rd6vpk-5;
+      }
+      .lst-kix_krtosyw4tuge-0 > li {
+        counter-increment: lst-ctn-kix_krtosyw4tuge-0;
+      }
+      ol.lst-kix_krtosyw4tuge-5.start {
+        counter-reset: lst-ctn-kix_krtosyw4tuge-5 0;
+      }
+      .lst-kix_krtosyw4tuge-6 > li {
+        counter-increment: lst-ctn-kix_krtosyw4tuge-6;
+      }
+      .lst-kix_krtosyw4tuge-6 > li:before {
+        content: "" counter(lst-ctn-kix_krtosyw4tuge-6, decimal) ". ";
+      }
+      .lst-kix_krtosyw4tuge-8 > li:before {
+        content: "" counter(lst-ctn-kix_krtosyw4tuge-8, lower-roman) ". ";
+      }
+      .lst-kix_krtosyw4tuge-4 > li {
+        counter-increment: lst-ctn-kix_krtosyw4tuge-4;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-4.start {
+        counter-reset: lst-ctn-kix_fjcmf2rd6vpk-4 0;
+      }
+      .lst-kix_krtosyw4tuge-7 > li:before {
+        content: "" counter(lst-ctn-kix_krtosyw4tuge-7, lower-latin) ". ";
+      }
+      ol.lst-kix_fjcmf2rd6vpk-7.start {
+        counter-reset: lst-ctn-kix_fjcmf2rd6vpk-7 0;
+      }
+      ol.lst-kix_krtosyw4tuge-8.start {
+        counter-reset: lst-ctn-kix_krtosyw4tuge-8 0;
+      }
+      .lst-kix_krtosyw4tuge-2 > li:before {
+        content: "" counter(lst-ctn-kix_krtosyw4tuge-2, lower-roman) ". ";
+      }
+      .lst-kix_krtosyw4tuge-4 > li:before {
+        content: "" counter(lst-ctn-kix_krtosyw4tuge-4, lower-latin) ". ";
+      }
+      .lst-kix_krtosyw4tuge-1 > li {
+        counter-increment: lst-ctn-kix_krtosyw4tuge-1;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-8 {
+        list-style-type: none;
+      }
+      .lst-kix_krtosyw4tuge-1 > li:before {
+        content: "" counter(lst-ctn-kix_krtosyw4tuge-1, lower-latin) ". ";
+      }
+      .lst-kix_krtosyw4tuge-5 > li:before {
+        content: "" counter(lst-ctn-kix_krtosyw4tuge-5, lower-roman) ". ";
+      }
+      .lst-kix_fjcmf2rd6vpk-0 > li {
+        counter-increment: lst-ctn-kix_fjcmf2rd6vpk-0;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-7 {
+        list-style-type: none;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-6 {
+        list-style-type: none;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-5 {
+        list-style-type: none;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-4 {
+        list-style-type: none;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-3 {
+        list-style-type: none;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-2 {
+        list-style-type: none;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-1 {
+        list-style-type: none;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-0 {
+        list-style-type: none;
+      }
+      .lst-kix_krtosyw4tuge-3 > li:before {
+        content: "" counter(lst-ctn-kix_krtosyw4tuge-3, decimal) ". ";
+      }
+      ol.lst-kix_fjcmf2rd6vpk-3.start {
+        counter-reset: lst-ctn-kix_fjcmf2rd6vpk-3 0;
+      }
+      .lst-kix_fjcmf2rd6vpk-3 > li {
+        counter-increment: lst-ctn-kix_fjcmf2rd6vpk-3;
+      }
+      .lst-kix_krtosyw4tuge-2 > li {
+        counter-increment: lst-ctn-kix_krtosyw4tuge-2;
+      }
+      ol.lst-kix_krtosyw4tuge-7 {
+        list-style-type: none;
+      }
+      ol.lst-kix_krtosyw4tuge-8 {
+        list-style-type: none;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-0.start {
+        counter-reset: lst-ctn-kix_fjcmf2rd6vpk-0 0;
+      }
+      .lst-kix_krtosyw4tuge-0 > li:before {
+        content: "" counter(lst-ctn-kix_krtosyw4tuge-0, decimal) ". ";
+      }
+      ol.lst-kix_krtosyw4tuge-6.start {
+        counter-reset: lst-ctn-kix_krtosyw4tuge-6 0;
+      }
+      ol.lst-kix_krtosyw4tuge-3 {
+        list-style-type: none;
+      }
+      ol.lst-kix_krtosyw4tuge-4 {
+        list-style-type: none;
+      }
+      ol.lst-kix_krtosyw4tuge-5 {
+        list-style-type: none;
+      }
+      ol.lst-kix_krtosyw4tuge-6 {
+        list-style-type: none;
+      }
+      ol.lst-kix_krtosyw4tuge-2.start {
+        counter-reset: lst-ctn-kix_krtosyw4tuge-2 0;
+      }
+      .lst-kix_krtosyw4tuge-7 > li {
+        counter-increment: lst-ctn-kix_krtosyw4tuge-7;
+      }
+      .lst-kix_krtosyw4tuge-3 > li {
+        counter-increment: lst-ctn-kix_krtosyw4tuge-3;
+      }
+      ol.lst-kix_fjcmf2rd6vpk-6.start {
+        counter-reset: lst-ctn-kix_fjcmf2rd6vpk-6 0;
+      }
+      .lst-kix_fjcmf2rd6vpk-8 > li {
+        counter-increment: lst-ctn-kix_fjcmf2rd6vpk-8;
+      }
+      .lst-kix_fjcmf2rd6vpk-5 > li:before {
+        content: "" counter(lst-ctn-kix_fjcmf2rd6vpk-5, lower-roman) ". ";
+      }
+      .lst-kix_fjcmf2rd6vpk-4 > li:before {
+        content: "" counter(lst-ctn-kix_fjcmf2rd6vpk-4, lower-latin) ". ";
+      }
+      .lst-kix_fjcmf2rd6vpk-6 > li:before {
+        content: "" counter(lst-ctn-kix_fjcmf2rd6vpk-6, decimal) ". ";
+      }
+      .lst-kix_fjcmf2rd6vpk-2 > li {
+        counter-increment: lst-ctn-kix_fjcmf2rd6vpk-2;
+      }
+      ol.lst-kix_krtosyw4tuge-0.start {
+        counter-reset: lst-ctn-kix_krtosyw4tuge-0 0;
+      }
+      .lst-kix_fjcmf2rd6vpk-1 > li:before {
+        content: "" counter(lst-ctn-kix_fjcmf2rd6vpk-1, lower-latin) ". ";
+      }
+      .lst-kix_fjcmf2rd6vpk-2 > li:before {
+        content: "" counter(lst-ctn-kix_fjcmf2rd6vpk-2, lower-roman) ". ";
+      }
+      .lst-kix_fjcmf2rd6vpk-3 > li:before {
+        content: "" counter(lst-ctn-kix_fjcmf2rd6vpk-3, decimal) ". ";
+      }
+      .lst-kix_fjcmf2rd6vpk-4 > li {
+        counter-increment: lst-ctn-kix_fjcmf2rd6vpk-4;
+      }
+      ol.lst-kix_krtosyw4tuge-0 {
+        list-style-type: none;
+      }
+      ol.lst-kix_krtosyw4tuge-1 {
+        list-style-type: none;
+      }
+      ol.lst-kix_krtosyw4tuge-2 {
+        list-style-type: none;
+      }
+      .lst-kix_fjcmf2rd6vpk-7 > li {
+        counter-increment: lst-ctn-kix_fjcmf2rd6vpk-7;
+      }
+      .lst-kix_fjcmf2rd6vpk-0 > li:before {
+        content: "" counter(lst-ctn-kix_fjcmf2rd6vpk-0, decimal) ". ";
+      }
+      ol.lst-kix_fjcmf2rd6vpk-2.start {
+        counter-reset: lst-ctn-kix_fjcmf2rd6vpk-2 0;
+      }
+      ol.lst-kix_krtosyw4tuge-3.start {
+        counter-reset: lst-ctn-kix_krtosyw4tuge-3 0;
+      }
+      .lst-kix_krtosyw4tuge-8 > li {
+        counter-increment: lst-ctn-kix_krtosyw4tuge-8;
+      }
+      ol {
+        margin: 0;
+        padding: 0;
+      }
+      table td,
+      table th {
+        padding: 0;
+      }
+      .c12 {
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 16pt;
+        font-family: "Book Antiqua";
+        font-style: normal;
+      }
+      .c4 {
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 11pt;
+        font-family: "Book Antiqua";
+        font-style: normal;
+      }
+      .c8 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 9pt;
+        font-family: "Arial";
+        font-style: italic;
+      }
+      .c10 {
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 10pt;
+        font-family: "Book Antiqua";
+        font-style: normal;
+      }
+      .c0 {
+        color: #000000;
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 10pt;
+        font-family: "Book Antiqua";
+        font-style: normal;
+      }
+      .c13 {
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 14pt;
+        font-family: "Book Antiqua";
+        font-style: normal;
+      }
+      .c5 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .c11 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1.15;
+        orphans: 2;
+        widows: 2;
+        text-align: right;
+      }
+      .c1 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .c3 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1;
+        text-align: left;
+      }
+      .c9 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        line-height: 1;
+        text-align: center;
+      }
+      .c7 {
+        padding-top: 0pt;
+        padding-bottom: 6pt;
+        line-height: 1;
+        text-align: left;
+      }
+      .c6 {
+        background-color: #ffffff;
+        max-width: 468pt;
+        padding: 72pt 72pt 72pt 72pt;
+      }
+      .c2 {
+        height: 11pt;
+      }
+      .title {
+        padding-top: 0pt;
+        color: #000000;
+        font-size: 26pt;
+        padding-bottom: 3pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      .subtitle {
+        padding-top: 0pt;
+        color: #666666;
+        font-size: 15pt;
+        padding-bottom: 16pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      li {
+        color: #000000;
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      p {
+        margin: 0;
+        color: #000000;
+        font-size: 11pt;
+        font-family: "Arial";
+      }
+      h1 {
+        padding-top: 20pt;
+        color: #000000;
+        font-size: 20pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h2 {
+        padding-top: 18pt;
+        color: #000000;
+        font-size: 16pt;
+        padding-bottom: 6pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h3 {
+        padding-top: 16pt;
+        color: #434343;
+        font-size: 14pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h4 {
+        padding-top: 14pt;
+        color: #666666;
+        font-size: 12pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h5 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+      h6 {
+        padding-top: 12pt;
+        color: #666666;
+        font-size: 11pt;
+        padding-bottom: 4pt;
+        font-family: "Arial";
+        line-height: 1.15;
+        page-break-after: avoid;
+        font-style: italic;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body style="width: 500px; margin: 0 auto" class="c6">
+    <p class="c9"><span class="c12">SOFTWARE LICENSING AGREEMENT</span></p>
+    <p class="c2 c3"><span class="c13"></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; This license agreement is made as of {{ date }} (the
+        &ldquo;Effective</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; Date&rdquo;&rdquo;) by and between Aptos NFT Launchpad
+        (&ldquo;Owner&rdquo;) and {{ name }} (&ldquo;User&rdquo;)</span
+      >
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0">&nbsp; &nbsp; The Parties agree as follows: </span>
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; License. Owner grants to User an {{ license_type }} to
+        use the following items</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; of intellectual property (the &ldquo;Licensed IP&rdquo;):
+        {{ ip }}
+      </span>
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; Solely for the limited term of {{ contract_term }} the
+        User is authorized</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; to use the Licensed IP without restrictions.
+      </span>
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; Consideration. As consideration for the license granted
+        and described in</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; this agreement, the User shall pay to the owner {{
+        royalty_amount }} for use of</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; the IP over the limited term of the license granted.
+      </span>
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; Right to Sublicense. User has no right to grant
+        sublicenses to any third</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; party unless Owner provides its approval in writing.
+      </span>
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; Copies. User shall not make copies of the Licensed IP,
+        except as expressly</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; permitted by Owner. For any authorized copy made of the
+        Licensed IP, User</span
+      >
+    </p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; must accurately reproduce the Licensed IP with the proper
+        notices as</span
+      >
+    </p>
+    <p class="c1"><span class="c0">&nbsp; &nbsp; directed by Owner. </span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; The parties have entered into this Agreement as of the
+        Effective Date.</span
+      >
+    </p>
+    <p class="c1"><span class="c0">&nbsp; &nbsp; </span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; Owner signature: {Owner private key signature}
+      </span>
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0">&nbsp; &nbsp; Owner Full Legal name: {{ name }} </span>
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; User signature: {Buyer private key signature}
+      </span>
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1">
+      <span class="c0"
+        >&nbsp; &nbsp; User Full name: {User full legal name}</span
+      >
+    </p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1 c2"><span class="c0"></span></p>
+    <p class="c1 c2"><span class="c10"></span></p>
+    <p class="c2 c7"><span class="c4"></span></p>
     <div>
-      This license agreement is made as of Fri May 7, 2022 (the “Effective
-      Date””) by and between {Full legal name} (“Owner”) and {Full legal name of
-      purchases} (“User”) <br />
+      <p class="c5"><span class="c8">Software Licensing Agreement</span></p>
+      <p class="c2 c11"><span class="c8"></span></p>
     </div>
-
-    The Parties agree as follows: <br />
-
-    License. Owner grants to User an {License type} to use the following items
-    of intellectual property (the “Licensed IP”): <br />
-
-    Solely for the limited term of {insert contract term} the User is authorized
-    to use the Licensed IP without restrictions. <br />
-
-    Consideration. As consideration for the license granted and described in
-    this agreement, the User shall pay to the owner {licensing fee} for use of
-    the IP over the limited term of the license granted. <br />
-
-    Right to Sublicense. User has no right to grant sublicenses to any third
-    party unless Owner provides its approval in writing. <br />
-
-    Copies. User shall not make copies of the Licensed IP, except as expressly
-    permitted by Owner. For any authorized copy made of the Licensed IP, User
-    must accurately reproduce the Licensed IP with the proper notices as
-    directed by Owner. <br />
-
-    The parties have entered into this Agreement as of the Effective Date.
-    <br />
-
-    Owner signature: {Owner private key signature} <br />
-
-    Owner Full Legal name: {Full legal name} <br />
-
-    User signature: {Buyer private key signature} <br />
-
-    User Full name: {User full legal name} <br />
   </body>
 </html>

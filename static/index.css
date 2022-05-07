@@ -235,7 +235,7 @@ select{
     left:6px;
     font-size:10px;
 }
-.buttons button, .connect{
+.buttons button, .connect {
     height:40px;
     width:100px;
     border:none;

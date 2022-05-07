@@ -3,12 +3,17 @@ var main_form=document.querySelectorAll(".main");
 var step_list = document.querySelectorAll(".progress-bar li");
 var num = document.querySelector(".step-number");
 let formnumber=0;
+var addr = "";
 
 next_click.forEach(function(next_click_form){
     next_click_form.addEventListener('click',function(){
         if(!validateform()){
             return false
         }
+      if (addr == "" && formnumber == 1) {
+        alert("Please connect your wallet before you proceed.");
+        return;
+      }
        formnumber++;
        updateform();
        progress_forward();
@@ -69,9 +74,13 @@ function progress_forward(){
     if (formnumber == 1)
       upload_image();
 
-    if (formnumber == 2)
+    if (formnumber == 2) {
       change_license_url();
-
+      if (addr == "") {
+        alert("Please connect your wallet before you proceed.");
+        return;
+      }
+    }
     num.innerHTML = formnumber+1;
     step_list[formnumber].classList.add('active');
 }
@@ -100,7 +109,7 @@ async function mint() {
   var contract_term = document.getElementById('contract-term').value;
   var royalty_amount = document.getElementById('royalty-amt').value;
 
-  const data = {nft_name, desc, image, name, license_type, contract_term, royalty_amount};
+  const data = {nft_name, desc, image, name, license_type, contract_term, royalty_amount, addr};
   const res = await fetch("/mint", {
     method: 'POST',
     headers: {
@@ -112,6 +121,12 @@ async function mint() {
   const content = await res.json();
 
   console.log(content);
+}
+
+function connect() {
+  window.aptos.account().then((address)=> addr = address);
+  document.getElementById('connect').disabled = true;
+  document.getElementById('connect').innerHTML = "Connected";
 }
 
 async function upload_image() {

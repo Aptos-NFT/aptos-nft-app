@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
+import datetime
+import base64
 
 project_id = "28psmibihFDr0t5GMm9y9jVTNIr"
 project_secret = "ac6a272318ee4d319b9f679038d5b3d7"
@@ -23,7 +25,18 @@ def upload_image(request):
     return JsonResponse({'url': url})
 
 def view_license(request):
-    return render(request, "contract.html")
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    d = datetime.datetime.now()
+    view = request.GET["view"]
+    date = d.strftime("%a") + " " + d.strftime('%B') + " " + d.strftime('%d') + ", " + d.strftime('%Y')
+    data = json.loads(base64.b64decode(view))
+    data.update({"date": date, "ip": ip})
+
+    return render(request, "contract.html", data)
 
 @csrf_exempt
 def mint(request):
